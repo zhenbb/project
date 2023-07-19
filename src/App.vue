@@ -1,8 +1,22 @@
-<script setup>
+<script>
+import { RouterView } from "vue-router";
+import HomeBoxView from "./components/homeBox.vue"
+
+
+export default {
+
+  components: {
+    RouterView,
+    HomeBoxView
+  },
+
+}
+
 </script>
 
 <template>
-  <button type="button" class="btn btn-primary">Primary</button>
+  <RouterView :key="$route.fullPath" />
+  <HomeBoxView />
 </template>
 
 <style scoped>
